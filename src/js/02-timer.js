@@ -1,7 +1,7 @@
-const flatpickr = require('flatpickr');
-
 import flatpickr from 'flatpickr';
 import "flatpickr/dist/flatpickr.min.css";
+
+const flatpickr = require('flatpickr');
 
 const refs = {
   input: document.getElementById('datetime-picker'),
@@ -35,4 +35,7 @@ flatpickr(refs.input, options);
 
 refs.button.addEventListener('click', clickEvent);
 
-function clickEvent(event) {}
+function clickEvent(event) {
+  options.onClose();
+}
+
